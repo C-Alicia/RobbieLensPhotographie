@@ -41,11 +41,11 @@ footer {
 }
 
 .cta {
+  display: inline-block;
   background: linear-gradient(#8e86b5, #acaeed);
   color: white;
   border-radius: 50px;
   padding: 20px 30px;
-  margin-top: 50px;
 }
 
 a:hover {
@@ -69,6 +69,7 @@ a:hover {
   border-right: 1px solid #8e86b5;
   border-bottom: 1px solid #8e86b5;
   padding: 50px;
+  margin-bottom: 80px;
 }
 
 .carre-contenu h2 {
@@ -79,11 +80,15 @@ a:hover {
   margin-top: 30px;
 }
 
+.carre-contenu + div {
+  text-align: center;
+}
+
 section {
   padding: 80px;
 }
 
-.main-a-propos {
+.a-propos-main {
   width: 50%;
   margin: auto;
 }
@@ -100,40 +105,18 @@ nav a {
   margin-left: 30px;
 }
 
-.container-introduction {
-  display: flex;
-  flex-direction: row;
-  max-width: 1000px;
-  width: 50%;
-  align-items: flex-start;
-  margin: auto
-}
-
-.container-introduction div {
-  padding-right: 80px;
-}
-
-.container-introduction h1 {
-  margin-bottom: 15px;
-}
-
-.container-introduction p {
-  margin-bottom: 30px;
-}
-
-/* Partie image dans accueil */
-.container-image {
+.accueil-photos {
   background-color: white;
   padding: 80px;
 }
 
-.container-image h2 {
+.accueil-photos h2 {
   color: #242424;
   text-align: center;
   margin-bottom: 80px;
 }
 
-.container-image div {
+.accueil-photos div {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -141,13 +124,31 @@ nav a {
   margin-bottom: 15px;
 }
 
-/* Portfolio */
+.accueil-introduction {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-items: flex-start;
+  margin: auto;
+}
 
-.section-portfolio-photos {
+.accueil-introduction h1 {
+  margin-bottom: 15px;
+}
+
+.accueil-introduction p {
+  margin-bottom: 30px;
+}
+
+.accueil-introduction div {
+  padding-right: 80px;
+}
+
+.portfolio-section-photos {
   background-color: white;
 }
 
-.section-portfolio-photos h2 {
+.portfolio-section-photos h2 {
   color: #242424;
   margin-bottom: 80px;
 }
@@ -157,6 +158,7 @@ nav a {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 300px 300px 300px;
   gap: 15px;
+  margin-bottom: 80px;
 }
 
 .grid-portraits {
@@ -171,4 +173,27 @@ nav a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.lien-conteneur-photo {
+  position: relative;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.lien-conteneur-photo:hover .photo-hover {
+  display: flex;
 }
