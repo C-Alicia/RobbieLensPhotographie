@@ -1,0 +1,147 @@
+.tarif-shooting,
+.tarif-contact {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.tarif-item {
+    border-right: 1px solid #8e86b5;
+    border-bottom: 1px solid #8e86b5;
+    padding-right: 15px;
+    width: 45%;
+    max-width: 600px;
+    margin-bottom: 80px;
+}
+
+.tarif-item h3 {
+    color: #A5B4FC;
+    margin-bottom: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.tarif-item p {
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #F9F8FF;
+    margin-bottom: 40px;
+    width: 75%;
+}
+
+.tarif-item h4 {
+    color: #A5B4FC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.tarif-item span {
+    color: #F9F8FF;
+    font-size: 10px;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 40px;
+}
+
+.contenu-carre {
+    margin-bottom: 40px;
+}
+
+/* PARTIE TABLEAU */
+
+.tarif-studio {
+    table-layout: fixed;
+    width: 100%;
+    text-align: left;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tarif-studio h2 {
+    color: #A5B4FC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.tarif-studio table {
+    color: white;
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    /* correspond aussi */
+    margin: 80px auto;
+    border-collapse: collapse;
+}
+
+.tarif-studio .col-small
+{
+    width: 28%;
+}
+
+th {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #a5b4fc;
+}
+
+td {
+    padding: 80px;
+    font-family: 'Manrope', sans-serif;
+    line-height: 24px;
+}
+
+.text-left
+{
+    text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+  .tarif-contact,
+  .tarif-shooting {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+
+  .tarif-item {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+  }
+
+  .tarif-item p {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .contenu-carre {
+    margin-bottom: 30px;
+  }
+
+  .tarif-studio {
+    display: none;
+  }
+}
