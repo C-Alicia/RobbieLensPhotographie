@@ -1,3 +1,42 @@
+/* PArtie photo */
+.apropos-section-photos {
+  position: relative;
+  margin-top: 80px;
+  padding: 0 80px;
+  margin-bottom: 80px;
+}
+
+.apropos-section-photos::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 250px;
+  width: 40%;
+  height: calc(100% - 15px);
+  background-color: #2C2E51;
+  z-index: 0;
+}
+
+
+.grid-portraits {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-portraits img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Partie à propos */
 .carre-contenu {
   border-right: 1px solid #8e86b5;
   border-bottom: 1px solid #8e86b5;
@@ -15,7 +54,7 @@
   margin-top: 30px;
 }
 
-.carre-contenu + div {
+.carre-contenu+div {
   text-align: center;
 }
 
@@ -25,4 +64,21 @@
 
 h1 {
   text-align: center;
+}
+
+@media screen and (max-width: 996px) {
+  .grid-portraits {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .apropos-section-photos::after {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .apropos-section-photos::after {
+    background-color: transparent;
+  }
 }
